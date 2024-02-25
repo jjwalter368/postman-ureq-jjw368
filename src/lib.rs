@@ -13,10 +13,10 @@ mod tests {
         let result = postman_ureq("https://captive.apple.com/");
         assert_eq!(result, "<HTML><HEAD><TITLE>Success</TITLE></HEAD><BODY>Success</BODY></HTML>\n");
     }
-    //fn server_test() {
-        //when api works, use the url from that
-        //let result = postman_ureq("http://127.0.0.1/8800");
-        //assert_eq!(result, "<HTML><HEAD><TITLE>Success</TITLE></HEAD><BODY>Success</BODY></HTML>\n");
+    #[test]
+    fn server_test() {
+        let result = postman_ureq("http://127.0.0.1:8000");
+        assert_eq!(result, "Hello, world!");
 
-    //}
+    }
 }
